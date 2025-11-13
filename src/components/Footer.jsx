@@ -21,10 +21,10 @@ export default function Footer() {
             </h3>
             <div className="space-y-1 text-base leading-relaxed text-white/80">
               <a
-                href="mailto:info@morrescompany.com"
+                href="mailto:info@brandness.co.za"
                 className="block text-lg font-medium text-white hover:text-accent"
               >
-                info@morrescompany.com
+                info@brandness.co.za
               </a>
               <a
                 href="tel:+31403302148"
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.38em] text-white/70">
+            <h4 className="text-sm font-semibold uppercase text-white/70">
               Our locations
             </h4>
             <ul className="mt-6 space-y-4 text-base text-white/80">
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.38em] text-white/70">
+            <h4 className="text-sm font-semibold uppercase text-white/70">
               Proud partner of
             </h4>
             <div className="mt-6 space-y-4">
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex sm:items-center sm:justify-between">
-          <p>©2025 Morres & Company. All rights reserved.</p>
+          <p>©2025 Brandness. All rights reserved.</p>
           <div className="mt-3 flex gap-6 sm:mt-0">
             <a href="#privacy" className="hover:text-accent">
               Privacy policy

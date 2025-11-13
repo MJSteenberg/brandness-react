@@ -17,7 +17,7 @@ const inspirationItems = [
   {
     id: 'bno',
     title:
-      'Morres & Company joins Beroepsorganisatie Nederlandse Ontwerpers (BNO)',
+      'Brandness joins Beroepsorganisatie Nederlandse Ontwerpers (BNO)',
     date: 'December 7, 2024',
     image:
       'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
@@ -51,7 +51,7 @@ export default function Inspiration() {
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.38em] text-slate-600">
+            <p className="text-sm font-semibold uppercase text-slate-600">
               Inspiration
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold text-navy sm:text-4xl">
@@ -60,7 +60,7 @@ export default function Inspiration() {
           </div>
           <a
             href="#inspiration"
-            className="inline-flex items-center justify-center gap-3 rounded-full border border-navy/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-navy transition hover:border-navy/30"
+            className="inline-flex items-center justify-center gap-3 rounded-full border border-navy/10 px-6 py-3 text-sm font-semibold uppercase text-navy transition hover:border-navy/30"
           >
             More inspiration
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -98,7 +98,7 @@ export default function Inspiration() {
               </div>
               <div className="mt-4 flex flex-1 flex-col justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                  <p className="text-xs font-semibold uppercase text-slate-500">
                     {item.date}
                   </p>
                   <h3 className="mt-3 text-lg font-semibold leading-snug text-navy">

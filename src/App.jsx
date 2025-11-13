@@ -1,20 +1,33 @@
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx'
-import Services from './components/Services.jsx'
-import FeaturedWork from './components/FeaturedWork.jsx'
-import Inspiration from './components/Inspiration.jsx'
 import Footer from './components/Footer.jsx'
 import FloatingChat from './components/FloatingChat.jsx'
+import Home from './pages/Home.jsx'
+import FontShowcase from './components/FontShowcase.jsx'
 
 function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      window.scrollTo({ top: 0 })
+    }
+  }, [location])
+
   return (
-    <div className="min-h-screen bg-[#F6F7FB]">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <main>
-        <Hero />
-        <Services />
-        <FeaturedWork />
-        <Inspiration />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/fonts" element={<FontShowcase />} />
+        </Routes>
       </main>
       <Footer />
       <FloatingChat />

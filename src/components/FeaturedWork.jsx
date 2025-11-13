@@ -28,7 +28,7 @@ export default function FeaturedWork() {
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.38em] text-slate-600">
+            <p className="text-sm font-semibold uppercase text-slate-600">
               Try saying no to this.
             </p>
             <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold text-navy sm:text-4xl">

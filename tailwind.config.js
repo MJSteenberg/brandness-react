@@ -14,8 +14,8 @@ export default {
         cream: '#FAF6ED',
       },
       fontFamily: {
-        sans: ['"Manrope"', 'sans-serif'],
-        display: ['"Lexend"', 'sans-serif'],
+        sans: ['"Font36920"', 'sans-serif'],
+        display: ['"Font369120"', 'sans-serif'],
       },
       boxShadow: {
         card: '0 18px 36px rgba(15, 34, 50, 0.08)',
