@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="relative overflow-hidden rounded-[24px] bg-charcoal/60 sm:rounded-[28px] lg:rounded-[36px]">
           <video
             className="h-[240px] w-full object-cover object-center sm:h-[320px] lg:h-[480px]"
-            src="/videos/sample.webm"
+            src="./videos/sample.webm"
             autoPlay
             loop
             muted

@@ -24,7 +24,7 @@ const Tag = ({ children }) => (
 
 export default function FeaturedWork() {
   return (
-    <section id="work" className="bg-white pb-20 pt-6 lg:pb-28">
+    <section id="work" className="bg-white pb-20 pt-4 sm:pt-6 lg:pb-28">
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
