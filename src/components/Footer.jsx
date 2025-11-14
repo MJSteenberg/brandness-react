@@ -1,18 +1,19 @@
 const socials = [
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'in' },
-  { label: 'Instagram', href: 'https://instagram.com', icon: 'ig' },
-  { label: 'TikTok', href: 'https://www.tiktok.com', icon: 'tt' },
+  { label: 'LinkedIn', href: 'https://linkedin.com', icon: '\uf0e1' },
+  { label: 'Instagram', href: 'https://instagram.com', icon: '\uf16d' },
+  { label: 'Facebook', href: 'https://facebook.com', icon: '\uf09a' },
 ]
 
 const SocialIcon = ({ label, icon }) => (
-  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-sm font-semibold uppercase tracking-wide">
-    {icon}
+  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-lg text-white">
+    <span aria-hidden className="font-[FontAwesomeBrands]">{icon}</span>
+    <span className="sr-only">{label}</span>
   </span>
 )
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-navy text-white">
+    <footer id="contact" className="bg-[#031a5c] text-white">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div className="space-y-6">
@@ -84,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex sm:items-center sm:justify-between">
-          <p>©2025 Brandness. All rights reserved.</p>
+          <p>©2025 brandness. All rights reserved.</p>
           <div className="mt-3 flex gap-6 sm:mt-0">
             <a href="#privacy" className="hover:text-accent">
               Privacy policy

@@ -37,7 +37,7 @@ export default function FeaturedWork() {
           </div>
           <a
             href="#work"
-            className="inline-flex items-center justify-center gap-3 rounded-full bg-accent px-6 py-3 font-semibold text-navy shadow-[0_12px_30px_rgba(247,211,84,0.35)] transition hover:bg-accentDark"
+            className="inline-flex items-center justify-center gap-3 rounded-full bg-accent px-6 py-3 font-bold text-white shadow-[0_6px_18px_rgba(244,78,34,0.22)] transition hover:bg-accentDark"
           >
             Check out our work
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

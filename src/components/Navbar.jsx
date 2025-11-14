@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { scrollToWithOffset } from '../utils/scrollWithOffset.js'
 
 const navLinks = [
   { label: 'Brands', href: '#brands', type: 'hash' },
@@ -42,7 +43,7 @@ export default function Navbar() {
     const performScroll = () => {
       const el = document.querySelector(hash)
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        requestAnimationFrame(() => scrollToWithOffset(el))
       }
     }
 
@@ -57,10 +58,10 @@ export default function Navbar() {
   return (
     <header className="relative z-[1000]">
       <div
+        data-navbar-bar
         className={`mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 transition-all duration-500 lg:px-8 lg:py-6 ${
-          showFloatingFlag ? 'pointer-events-none opacity-0 -translate-y-6' : 'opacity-100 translate-y-0'
-        }`}
-      >
+        showFloatingFlag ? 'pointer-events-none opacity-0 -translate-y-6' : 'opacity-100 translate-y-0'
+      }`}>
         <Link to="/" className="flex items-center gap-2 text-left leading-tight">
           <div className="text-left leading-tight">
             <span className="font-display text-xl font-semibold text-navy">
@@ -123,12 +124,12 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex">
-          <a
-            href="#contact"
-            className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-navy shadow-[0_10px_25px_rgba(247,211,84,0.35)] transition hover:bg-accentDark"
+          <Link
+            to="/contact"
+            className="rounded-full bg-accent px-5 py-2 text-sm font-bold text-white shadow-[0_6px_18px_rgba(244,78,34,0.22)] transition hover:bg-accentDark hover:text-white"
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         <button
@@ -161,23 +162,23 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`fixed inset-x-0 top-4 z-[1000] flex justify-center transition-all duration-500 ease-out ${
-          showFloatingFlag
-            ? 'pointer-events-auto opacity-100 translate-y-0'
-            : 'pointer-events-none opacity-0 -translate-y-6'
-        }`}
-      >
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/60 bg-white/95 px-6 py-3 shadow-[0_18px_45px_rgba(15,34,50,0.08)] backdrop-blur">
+        data-navbar-pill
+        className={`pointer-events-none fixed inset-x-0 top-4 z-[1000] flex justify-center transition-all duration-500 ease-out ${
+        showFloatingFlag
+          ? 'pointer-events-auto opacity-100 translate-y-0'
+          : 'opacity-0 -translate-y-6'
+      }`}>
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/60 bg-white/95 px-5 py-3 shadow-[0_6px_18px_rgba(15,34,50,0.04),0_12px_26px_rgba(15,34,50,0.05)] backdrop-blur lg:px-6">
           <Link to="/" className="flex items-center gap-2 text-left leading-tight">
             <div className="text-left leading-tight">
-              <span className="font-display text-xl font-semibold text-navy">brandness.</span>
-              <span className="block text-xs font-semibold text-slate-500">
+              <span className="font-display text-lg font-semibold text-navy lg:text-xl">brandness.</span>
+              <span className="block text-[10px] font-semibold text-slate-500 lg:text-xs">
                 Cultivating Digital Growth
               </span>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-8 text-sm font-medium lg:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium lg:flex">
             {navLinks.map((link) => (
               link.type === 'route' ? (
                 <NavLink
@@ -228,12 +229,12 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:flex">
-            <a
-              href="#contact"
-              className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-navy shadow-[0_10px_25px_rgba(247,211,84,0.35)] transition hover:bg-accentDark"
-            >
-              Contact
-            </a>
+          <Link
+            to="/contact"
+            className="rounded-full bg-accent px-5 py-2 text-sm font-bold text-white shadow-[0_6px_18px_rgba(244,78,34,0.22)] transition hover:bg-accentDark hover:text-white"
+          >
+            Contact
+          </Link>
           </div>
 
           <button
@@ -316,16 +317,13 @@ export default function Navbar() {
               </nav>
 
               <div className="mt-12 pt-6">
-                <button
-                  type="button"
-                  onClick={() => {
-                    closeMenu()
-                    handleScrollToHash('#contact')
-                  }}
-                  className="w-full rounded-full bg-accent px-6 py-3 text-base font-semibold text-navy shadow-[0_10px_30px_rgba(247,211,84,0.35)] transition hover:bg-accentDark"
+                <Link
+                  to="/contact"
+                  className="w-full rounded-full bg-accent px-6 py-3 text-base font-bold text-white shadow-[0_6px_18px_rgba(244,78,34,0.22)] transition hover:bg-accentDark hover:text-white"
+                  onClick={closeMenu}
                 >
                   Contact
-                </button>
+                </Link>
               </div>
             </div>
           </div>

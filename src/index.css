@@ -25,6 +25,14 @@
 }
 
 @font-face {
+  font-family: 'FontAwesomeBrands';
+  src: url('/fonts/fa-brands-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'FAD';
   src: url('/fonts/fa-duotone-900.woff2') format('woff2');
   font-weight: 900;
@@ -51,6 +59,14 @@
 @font-face {
   font-family: 'Font369110';
   src: url('/fonts/369A2D_11_0.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Font369100';
+  src: url('/fonts/369A2D_10_0.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -85,8 +101,13 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply m-0 font-sans bg-white text-slate-900 antialiased;
+    overflow-x: hidden;
   }
 
   a {
@@ -96,4 +117,23 @@
   a:hover {
     @apply text-slate-900;
   }
+}
+
+.services-pagination {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.services-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(15, 34, 50, 0.2);
+  opacity: 1;
+}
+
+.services-pagination .swiper-pagination-bullet-active {
+  background-color: rgba(15, 34, 50, 0.8);
 }
